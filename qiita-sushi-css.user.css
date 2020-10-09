@@ -1,0 +1,74 @@
+/* ==UserStyle==
+@name           Qiita Sushi
+@namespace      github.com/ia15076
+@version        0.0.1
+@license        MIT
+@homepageURL    https://github.com/ia15076/qiita-sushi-css
+@supportURL     https://github.com/ia15076/qiita-sushi-css/issues
+@updateURL      https://github.com/ia15076/qiita-sushi-css/raw/master/qiita-sushi-css.user.css
+==/UserStyle== */
+
+@-moz-document domain("qiita.com") {
+    @font-face {
+        font-family: "Sushinize M PLUS 1p";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://cdn.jsdelivr.net/gh/ia15076/sushinizemplus1p@latest/SushinizeMPLUS1p-Regular.woff2") format("woff2");
+        unicode-range: U+004c, U+0047, U+0054, U+004D;
+    }
+
+    @font-face {
+        font-family: "M PLUS 1p";
+        font-style: normal;
+        font-weight: 400;
+        src: url("http://mplus-webfonts.sourceforge.jp/mplus-1p-regular.woff") format("woff");
+    }
+
+    @keyframes sushi-go-round {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    * {
+        font-family: unset !important;
+    }
+
+    body {
+        font-family: "Sushinize M PLUS 1p", "M PLUS 1p", "FontAwesome", -apple-system, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif !important;
+    }
+
+    input,
+    textarea,
+    div.it-MdContent,
+    a[href*="items"]:not([class*="notification"]),
+    *[class*="title"],
+    *[class*="article"],
+    *[class*="comment"],
+    *[class*="draft"],
+    *[id*="title"],
+    *[id*="article"],
+    *[id*="comment"],
+    *[id*="draft"] {
+        font-family: "FontAwesome", -apple-system, Segoe UI, Helvetica Neue, Hiragino Kaku Gothic ProN, "メイリオ", meiryo, sans-serif !important;
+    }
+
+    svg[viewBox="0 0 392.81 429"],
+    svg[viewBox="0 0 271.61 199.3"],
+    svg[viewBox="0 0 564.81 145.68"],
+    svg[viewBox="0 0 640.75 145.68"] {
+        fill-opacity: 0;
+        background-image: url("https://cdn.jsdelivr.net/gh/rdrgn/opensushi@latest/assets/png-256/tuna.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    svg[viewBox="0 0 271.61 199.3"],
+    svg[viewBox="0 0 640.75 145.68"] {
+        animation: sushi-go-round 1s ease;
+    }
+}
