@@ -45,6 +45,7 @@
     textarea,
     div.it-MdContent,
     a[href*="items"]:not([class*="notification"]),
+    a[href*="private"]:not([class*="notification"]),
     *[class*="title"],
     *[class*="article"],
     *[class*="comment"],
